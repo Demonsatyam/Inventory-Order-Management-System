@@ -30,16 +30,19 @@ services:
       postgres:
         condition: service_healthy
 
-  # Frontend service (React). Uncomment once a Frontend/ directory with a
-  # Dockerfile exists.
-  # frontend:
-  #   build: ./Frontend
-  #   container_name: ioms_frontend
-  #   restart: unless-stopped
-  #   ports:
-  #     - "3000:3000"
-  #   depends_on:
-  #     - backend
+  frontend:
+    build:
+      context: ./Frontend
+      args:
+        # Browser calls the backend directly; for local Docker this is the
+        # host-published backend port.
+        VITE_API_URL: http://localhost:8000
+    container_name: ioms_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
 
 volumes:
   postgres_data:
