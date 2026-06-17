@@ -10,11 +10,9 @@ Built with a **FastAPI** backend, a **React (Vite)** frontend, a **PostgreSQL** 
 
 | Service        | Link |
 |----------------|------|
-| **Web App (Frontend)** | _add deployed link here_ |
-| **API (Backend)**      | _add deployed link here_ |
-| **API Docs (Swagger)** | _add deployed link here_ `/docs` |
-
-> Replace the placeholders above with your deployed URLs (e.g. Vercel/Netlify for the frontend, Render/Railway for the backend).
+| **Web App (Frontend)** | https://inventory-order-management-system-ashy.vercel.app/ |
+| **API (Backend)**      | https://inventory-order-management-system-1-oung.onrender.com |
+| **API Docs (Swagger)** | https://inventory-order-management-system-1-oung.onrender.com/docs |
 
 ---
 
